@@ -11,7 +11,7 @@ tags:
 - scripts
 - github
 - pages
-date: '2018-01-23 20:41:47 -0500'
+pubDate: 'Jan 23 2018'
 published: true
 draft: false
 comments: true

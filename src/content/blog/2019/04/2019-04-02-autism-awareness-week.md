@@ -9,13 +9,13 @@ tags:
 - autism awareness
 - autism awareness week
 - TakeBackOurIdentity
-date: '2019-04-03 00:00:00 -0400'
+pubDate: Apr 03 2019
 modified:
-  - datetime: "2025-09-01 14:30:00 -0400"
+  - datetime: "2025-09-01"
     reason: "Fixed a markdown formatting error"
-  - datetime: "2025-04-26 03:10:00 -0400"
+  - datetime: "2025-04-26"
     reason: "Fixed a missing comma"
-  - datetime: "2025-04-26 12:06:00 -0400"
+  - datetime: "2025-04-26"
     reason: Not all Autistics have an affinity for tech.
 summary: |+
   April 1st to 7th is Autism Awareness Week.

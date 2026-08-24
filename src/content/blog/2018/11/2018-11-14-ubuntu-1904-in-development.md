@@ -19,7 +19,7 @@ tags:
 - xubuntu 19.04
 - ubuntu mate
 - ubuntu mate 19.04
-date: '2018-11-14 20:41:17 -0500'
+pubDate: Nov 14 2018
 scrolllist:
   - group: Python
     text: >

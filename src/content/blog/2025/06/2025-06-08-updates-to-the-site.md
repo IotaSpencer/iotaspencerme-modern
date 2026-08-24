@@ -14,7 +14,7 @@ summary: |-
 description: |-
   There have been a large amount of changes to the site,
   this posts goes through almost all of them.
-date: '2025-06-08 04:33:05 -0300'
+pubDate: Jun 08 2025
 meta_links: 
   - rel: canonical
     href: https://www.example.com/updates-to-the-site/
