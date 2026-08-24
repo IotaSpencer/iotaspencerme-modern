@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Autism Awareness Week
+description: The first week of April is Autism awareness week, here's some pointers on autism.
 author: IotaSpencer
 categories:
 - Misc
