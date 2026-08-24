@@ -2,7 +2,7 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import remarkAttributes from 'remark-attributes';
+import remarkAttr from 'remark-attr';
 import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
@@ -15,6 +15,6 @@ export default defineConfig({
 		},
 	}),
 	markdown: {
-		remarkPlugins: [remarkAttributes],
+		remarkPlugins: [remarkAttr],
 	},
 });
