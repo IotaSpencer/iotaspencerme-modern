@@ -2,7 +2,7 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import remarkAttr from 'remark-attr';
+import remarkAttributes from 'remark-attributes';
 import cloudflare from "@astrojs/cloudflare";
 import { unified } from '@astrojs/markdown-remark';
 
@@ -17,7 +17,7 @@ export default defineConfig({
 	}),
 	markdown: {
 		processor: unified({
-			remarkPlugins: [remarkAttr, {mdx: true}],
+			remarkPlugins: [remarkAttributes, { mdx: true }],
 		}),
 	},
 });
