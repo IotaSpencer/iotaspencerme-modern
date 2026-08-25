@@ -5,6 +5,10 @@
  */
 
 :root {
+	color-scheme: light dark;
+  	/* Light mode defaults */
+  	--color-bg: #ffffff;
+  	--color-text: #1a1a1a;
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
 	--black: 15, 18, 25;
@@ -29,6 +33,11 @@
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
+}
+[data-theme="dark"] {
+  /* Dark mode overrides */
+  --color-bg: #1a1a1a;
+  --color-text: #e8e8e8;
 }
 body {
 	font-family: "Atkinson", sans-serif;
