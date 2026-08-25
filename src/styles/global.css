@@ -24,18 +24,19 @@
   /* Dark mode overrides */
   --color-bg: #1a1a1a;
   --color-text: #e8e8e8;
-}
 
-body {
-  background-color: var(--color-bg) !important;
-  color: var(--color-text) !important;
-}
-header, main, footer {
-  background-color: var(--color-bg) !important;
-  color: var(--color-text) !important;
-}
-h1, h2, h3, h4, h5, h6 {
-  color: var(--color-text) !important;
+
+  body {
+    background-color: var(--color-bg) !important;
+    color: var(--color-text) !important;
+  }
+  header, main, footer {
+    background-color: var(--color-bg) !important;
+    color: var(--color-text) !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text) !important;
+  }
 }
 @font-face {
 	font-family: "Atkinson";
