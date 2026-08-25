@@ -8,7 +8,7 @@ import { unified } from '@astrojs/markdown-remark';
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://example.com",
+	site: "https://new.iotaspencer.me",
 	integrations: [mdx(), sitemap()],
 	adapter: cloudflare({
 		platformProxy: {
@@ -17,7 +17,9 @@ export default defineConfig({
 	}),
 	markdown: {
 		processor: unified({
-			remarkPlugins: [remarkAttributes, { mdx: true }],
+			remarkPlugins: [
+				[remarkAttributes, {}]
+			],
 		}),
 	},
 });
