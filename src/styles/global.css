@@ -26,15 +26,15 @@
   --color-text: #e8e8e8;
 
 
-  body {
+  :global(body) {
     background-color: var(--color-bg) !important;
     color: var(--color-text) !important;
   }
-  header, main, footer {
+  :global(header), :global(main), :global(footer) {
     background-color: var(--color-bg) !important;
     color: var(--color-text) !important;
   }
-  h1, h2, h3, h4, h5, h6 {
+  :global(h1), :global(h2), :global(h3), :global(h4), :global(h5), :global(h6) {
     color: var(--color-text) !important;
   }
 }
