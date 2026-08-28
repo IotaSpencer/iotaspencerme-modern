@@ -5,13 +5,13 @@ import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu
 <div>
   <Astronav>
     <div class="flex justify-between">
-      <a>Your Logo</a>
+      <a><img src="/public/iota.png" alt="Logo" /></a>
       <MenuIcon class="w-4 h-4 text-gray-800" />
     </div>
     <MenuItems class="hidden lg:flex">
-      <ul>
-        <li>Home</li>
-        <li>About</li>
+      <ul class="">
+        <a href="/"><li style="display: inline-block;">Home</li></a>
+        <a href="/about"><li style="display: inline-block;">About</li></a>
         <li>
           <Dropdown class="group">
             <button>
