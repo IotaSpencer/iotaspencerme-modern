@@ -1,5 +1,6 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import { NavBar } from './NavBar.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -35,11 +36,7 @@ import { SITE_TITLE } from '../consts';
 				>
 			</a>
 		</div>
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-		</div>
+		<AstroNav />
 		
 	</nav>
 </header>

@@ -17,6 +17,7 @@
 		"@astrojs/rss": "^4.0.19",
 		"@astrojs/sitemap": "^3.7.3",
 		"astro": "^7.2.6",
+		"astro-navbar": "^2.4.0",
 		"remark-attributes": "^0.4.4",
 		"typescript": "5.9.3"
 	},
