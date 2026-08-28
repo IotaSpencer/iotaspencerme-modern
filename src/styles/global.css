@@ -28,15 +28,15 @@
   --color-text: #e8e8e8;
 
 
-  :global(body) {
+  ::global(body) {
     background-color: var(--color-bg) !important;
     color: var(--color-text) !important;
   }
-  :global(header), :global(main), :global(footer) {
+  ::global(header), ::global(main), ::global(footer) {
     background-color: var(--color-bg) !important;
     color: var(--color-text) !important;
   }
-  :global(h1), :global(h2), :global(h3), :global(h4), :global(h5), :global(h6) {
+  ::global(h1), ::global(h2), ::global(h3), ::global(h4), ::global(h5), ::global(h6) {
     color: var(--color-text) !important;
   }
 }
