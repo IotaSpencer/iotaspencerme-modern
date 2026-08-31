@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = "IotaSpencer's Website";
 export const SITE_DESCRIPTION = "Welcome!";
+export const SITE_COPYRIGHT = "© 2026 IotaSpencer / Ken Spencer | All rights reserved.";
