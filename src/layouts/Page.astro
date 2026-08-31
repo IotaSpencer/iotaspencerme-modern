@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+}
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_COPYRIGHT } from '../consts.ts';
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <BaseHead title="{title}" description="{description}" />
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>{SITE_COPYRIGHT}</p>
+    </footer>
+  </body>
+</html>
