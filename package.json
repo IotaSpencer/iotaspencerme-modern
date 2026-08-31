@@ -20,9 +20,12 @@
 		"astro-icon": "^1.2.0",
 		"astro-navbar": "^2.4.0",
 		"remark-attributes": "^0.4.4",
-		"typescript": "5.9.3"
+		"typescript": "5.9.3",
+		"unplugin-icons": "^23.0.1"
 	},
 	"devDependencies": {
+		"@iconify-json/carbon": "^1.2.26",
+		"@iconify-json/mdi": "^1.2.3",
 		"wrangler": "4.123.0"
 	},
 	"engines": {

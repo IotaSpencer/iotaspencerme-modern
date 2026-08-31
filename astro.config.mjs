@@ -5,13 +5,13 @@ import sitemap from "@astrojs/sitemap";
 import remarkAttributes from 'remark-attributes';
 import cloudflare from "@astrojs/cloudflare";
 import { unified } from '@astrojs/markdown-remark';
+import Icons from 'unplugin-icons/vite'
 
-import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
     site: "https://new.iotaspencer.me",
-    integrations: [mdx(), sitemap(), icon()],
+    integrations: [mdx(), sitemap(), ],
     adapter: cloudflare({
         platformProxy: {
             enabled: true,
@@ -24,4 +24,12 @@ export default defineConfig({
             ],
         }),
     },
+    vite: {
+    plugins: [
+      Icons({
+        compiler: 'astro',
+        autoInstall: true,
+      }),
+    ],
+  },
 });
