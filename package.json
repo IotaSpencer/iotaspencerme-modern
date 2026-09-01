@@ -16,10 +16,12 @@
 		"@astrojs/mdx": "^7.0.8",
 		"@astrojs/rss": "^4.0.19",
 		"@astrojs/sitemap": "^3.7.3",
+		"@tailwindcss/vite": "^4.3.3",
 		"astro": "^7.2.6",
 		"astro-icon": "^1.2.0",
 		"astro-navbar": "^2.4.0",
 		"remark-attributes": "^0.4.4",
+		"tailwindcss": "^4.3.3",
 		"typescript": "5.9.3",
 		"unplugin-icons": "^23.0.1"
 	},
