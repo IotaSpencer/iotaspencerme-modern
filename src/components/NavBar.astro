@@ -1,5 +1,8 @@
 ---
 import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
+import ChevronDownIcon from '~icons/akar-icons/chevron-down?width=1em&height=1em';
+
+
 
 ---
 
@@ -11,14 +14,14 @@ import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu
     </div>
     <MenuItems class="hidden ">
       <ul class="">
-        <a href="/"><li style="display: inline-block;">Home</li></a>
-        <a href="/about"><li style="display: inline-block;">About</li></a>
+        <a href="/" class="pr-2"><li style="display: inline-block;">Home</li></a>
+        <a href="/about" class="pr-2"><li style="display: inline-block;">About</li></a>
         <li>
           <Dropdown class="group">
             <button>
               <span> Services </span>
               <!-- You can style when dropdown is `open` -->
-              <icon-chevron-down class="w-4 h-4 text-gray-800 group-open:rotate-180 transition-transform" />
+              <ChevronDownIcon class="w-4 h-4 text-gray-800 group-open:rotate-180 transition-transform" />
             </button>
             <DropdownItems>
               <div class="absolute top-0">
