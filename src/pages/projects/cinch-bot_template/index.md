@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: Page
 title: Bot Template
 permalink: /projects/cinch-bot_template/index.html
 page_links:
@@ -7,7 +7,7 @@ page_links:
   GitHub: https://github.com/IotaSpencer/cinch-bot_template
 
 ---
-# cinch-bot_template
+## cinch-bot_template
 
 <div markdown="1">
 
