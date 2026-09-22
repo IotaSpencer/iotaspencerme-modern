@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: Page
 title: site_hook
 permalink: projects/site_hook/guide/index.html
 breadcrumb: guide

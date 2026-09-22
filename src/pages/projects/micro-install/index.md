@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: Page
 title: micro_install
 permalink: /projects/micro-install/index.html
 breadcrumb: micro_install

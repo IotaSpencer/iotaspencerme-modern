@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: Page
 title: IRC-Source
 permalink: /projects/irc-source/index.html
 tags:

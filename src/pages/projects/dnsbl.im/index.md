@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: Page
 title: DNSBL.im
 permalink: /projects/dnsbl.im/index.html
 tags:

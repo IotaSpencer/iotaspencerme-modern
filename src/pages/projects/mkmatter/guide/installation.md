@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: Page
 title: Installation
 breadcrumb: Installation
 permalink: /projects/mkmatter/guide/installation/index.html

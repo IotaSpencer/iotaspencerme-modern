@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: Page
 title: mastosite
 permalink: /projects/mastosite/index.html
 categories:

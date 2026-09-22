@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: Page
 title: PyLink
 permalink: /projects/pylink/index.html
 categories:

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: Page
 title: clickflare
 permalink: /projects/clickflare/index.html
 page_links:

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: Page
 title: Tutorial
 permalink: projects/site_hook/tutorial/index.html
 breadcrumb: Tutorial

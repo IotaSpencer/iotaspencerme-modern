@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: Page
 title: unibanner
 permalink: /projects/unibanner/index.html
 breadcrumb: unibanner

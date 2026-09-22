@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: Page
 title: site_hook
 permalink: projects/site_hook/developing/index.html
 breadcrumb: Developing

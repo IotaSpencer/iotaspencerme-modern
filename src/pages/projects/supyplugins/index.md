@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: Page
 title: SupyPlugins
 permalink: /projects/supyplugins/index.html
 categories:
