@@ -1,51 +1,95 @@
 ---
-import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import ChevronDownIcon from '~icons/akar-icons/chevron-down';
-
-
-
 ---
 
 <div>
   <Astronav>
     <div class="flex justify-between justify-items-center">
-        <MenuIcon class="w-8 h-8 text-gray-800 m-auto" />
+      <MenuIcon class="w-8 h-8 text-gray-800 m-auto" />
     </div>
-    <MenuItems class="hidden ">
-      <ul class="">
-        <a href="/" class="pr-2"><li style="display: inline-block;">Home</li></a>&nbsp;&sol;&nbsp;
-        <a href="/about" class="pr-2"><li style="display: inline-block;">About</li></a>&nbsp;&sol;&nbsp;
-        <a href="/blog" class="pr-2"><li style="display: inline-block;">Blog</li></a>&nbsp;&sol;&nbsp;
-        <li class="relative inline-block">
-          <Dropdown class="group relative">
-            <button class="flex items-center gap-1">
-              <span> Placeholder </span>
-              <ChevronDownIcon class="w-6 h-6 text-gray-800 group-open:rotate-180 transition-transform" style="display: block;" />
-            </button>
-            <DropdownItems class="relative">
-              <div class="absolute left-0 top-full z-50 mt-2 min-w-44 rounded-md border border-gray-200 bg-white p-2 shadow-lg">
-                <ul class="m-0 list-none space-y-1">
-                  <li class="px-2 py-1">Menu 1</li>
-                  <li class="px-2 py-1">Menu 2</li>
-                  <li class="relative px-2 py-1">
-                    <DropdownSubmenu class="group/submenu relative">
-                      <button class="flex items-center justify-between gap-2">Submenu</button>
-                      <DropdownItems class="relative">
-                        <div class="absolute left-full top-0 z-50 ml-2 min-w-40 rounded-md border border-gray-200 bg-white p-2 shadow-lg">
-                          <ul class="m-0 list-none space-y-1">
-                            <li class="px-2 py-1">Sub Menu 1</li>
-                            <li class="px-2 py-1">Sub Menu 2</li>
-                          </ul>
-                        </div>
-                      </DropdownItems>
-                    </DropdownSubmenu>
-                  </li>
-                </ul>
-              </div>
-            </DropdownItems>
-          </Dropdown>
+
+    <MenuItems class="hidden">
+      <ul class="flex items-center gap-3">
+        <li><a href="/" class="pr-2">Home</a></li>
+        <li><a href="/about" class="pr-2">About</a></li>
+        <li><a href="/blog" class="pr-2">Blog</a></li>
+        <li>
+          <button
+            id="nav-offcanvas-toggle"
+            type="button"
+            class="flex items-center gap-1 rounded-md px-2 py-1 text-left"
+            aria-expanded="false"
+            aria-controls="nav-offcanvas-panel"
+          >
+            <span>Placeholder</span>
+            <ChevronDownIcon class="h-6 w-6 text-gray-800 transition-transform duration-200" />
+          </button>
         </li>
       </ul>
     </MenuItems>
   </Astronav>
+
+  <div
+    id="nav-offcanvas-backdrop"
+    class="pointer-events-none fixed inset-0 z-40 bg-black/30 opacity-0 transition-opacity duration-200"
+  ></div>
+
+  <aside
+    id="nav-offcanvas-panel"
+    class="fixed right-0 top-0 z-50 h-screen w-[min(22rem,90vw)] translate-x-full border-l border-gray-200 bg-white p-6 shadow-2xl transition-transform duration-300 ease-out"
+    aria-hidden="true"
+  >
+    <div class="flex items-center justify-between">
+      <h2 class="m-0 text-xl font-bold text-gray-900">Menu</h2>
+      <button id="nav-offcanvas-close" type="button" class="text-lg font-medium text-gray-600">
+        Close
+      </button>
+    </div>
+
+    <ul class="mt-6 space-y-4 text-left text-base text-gray-800">
+      <li><a href="/" class="block py-2">Menu 1</a></li>
+      <li><a href="/about" class="block py-2">Menu 2</a></li>
+      <li><a href="/blog" class="block py-2">Sub Menu 1</a></li>
+      <li><a href="/" class="block py-2">Sub Menu 2</a></li>
+    </ul>
+  </aside>
 </div>
+
+<script>
+  const toggleButton = document.getElementById('nav-offcanvas-toggle');
+  const closeButton = document.getElementById('nav-offcanvas-close');
+  const backdrop = document.getElementById('nav-offcanvas-backdrop');
+  const panel = document.getElementById('nav-offcanvas-panel');
+
+  function setOffcanvasOpen(isOpen: boolean | undefined) {
+    if (!toggleButton || !panel || !backdrop) return;
+
+    toggleButton.setAttribute('aria-expanded', String(isOpen));
+    panel.classList.toggle('translate-x-full', !isOpen);
+    panel.classList.toggle('translate-x-0', isOpen);
+    panel.setAttribute('aria-hidden', String(!isOpen));
+    backdrop.classList.toggle('opacity-0', !isOpen);
+    backdrop.classList.toggle('pointer-events-none', !isOpen);
+    backdrop.classList.toggle('opacity-100', isOpen);
+    backdrop.classList.toggle('pointer-events-auto', isOpen);
+    const icon = toggleButton.querySelector('svg');
+    if (icon) {
+      icon.classList.toggle('rotate-180', isOpen);
+    }
+  }
+
+  toggleButton?.addEventListener('click', () => {
+    const isOpen = toggleButton.getAttribute('aria-expanded') === 'true';
+    setOffcanvasOpen(!isOpen);
+  });
+
+  closeButton?.addEventListener('click', () => setOffcanvasOpen(false));
+  backdrop?.addEventListener('click', () => setOffcanvasOpen(false));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      setOffcanvasOpen(false);
+    }
+  });
+</script>
