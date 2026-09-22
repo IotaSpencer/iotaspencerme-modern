@@ -2,68 +2,180 @@
 import ChevronDownIcon from '~icons/akar-icons/chevron-down';
 ---
 
-<div class="relative">
+<div class="nav-rail">
   <button
     id="nav-offcanvas-toggle"
     type="button"
-    class="flex items-center gap-1 rounded-md px-2 py-1 text-left"
+    class="nav-toggle"
     aria-expanded="false"
     aria-controls="nav-offcanvas-panel"
   >
-    <span>Menu</span>
-    <ChevronDownIcon class="h-6 w-6 text-gray-800 transition-transform duration-200" />
+    <span class="nav-toggle-label">Menu</span>
+    <ChevronDownIcon class="nav-toggle-icon" />
   </button>
 
   <div
     id="nav-offcanvas-backdrop"
-    class="pointer-events-none fixed inset-0 z-40 bg-black/30 opacity-0 transition-opacity duration-200"
+    class="nav-backdrop"
+    aria-hidden="true"
   ></div>
 
   <aside
     id="nav-offcanvas-panel"
-    class="fixed right-0 top-0 z-50 h-screen w-[min(22rem,90vw)] translate-x-full border-l border-gray-200 bg-white p-6 shadow-2xl transition-transform duration-300 ease-out"
+    class="nav-panel"
     aria-hidden="true"
   >
-    <div class="flex items-center justify-between">
-      <h2 class="m-0 text-xl font-bold text-gray-900">Menu</h2>
-      <button id="nav-offcanvas-close" type="button" class="text-lg font-medium text-gray-600">
+    <div class="nav-panel-header">
+      <h2>Menu</h2>
+      <button id="nav-offcanvas-close" type="button" class="nav-close-button">
         Close
       </button>
     </div>
 
-    <ul class="mt-6 space-y-4 text-left text-base text-gray-800">
-      <li><a href="/" class="block py-2">Home</a></li>
-      <li><a href="/about" class="block py-2">About</a></li>
-      <li><a href="/blog" class="block py-2">Blog</a></li>
-      <li><a href="/" class="block py-2">Menu 1</a></li>
-      <li><a href="/about" class="block py-2">Menu 2</a></li>
-    </ul>
+    <nav class="nav-panel-links" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
+      <a href="/">Menu 1</a>
+      <a href="/about">Menu 2</a>
+    </nav>
   </aside>
 </div>
+
+<style>
+  .nav-rail {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(var(--gray), 0.25);
+    background: var(--color-bg);
+    color: var(--color-text);
+    border-radius: 999px;
+    padding: 0.5rem 0.9rem;
+    font: inherit;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .nav-toggle:hover {
+    border-color: rgba(var(--gray), 0.45);
+    box-shadow: 0 2px 10px rgba(var(--gray), 0.08);
+  }
+
+  .nav-toggle-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 0.2s ease;
+  }
+
+  .nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 40;
+  }
+
+  .nav-backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(22rem, 90vw);
+    height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-text);
+    border-left: 1px solid rgba(var(--gray), 0.18);
+    box-shadow: -12px 0 30px rgba(var(--black), 0.12);
+    padding: 1.5rem 1.25rem;
+    transform: translateX(100%);
+    transition: transform 0.28s ease;
+    z-index: 50;
+  }
+
+  .nav-panel.is-open {
+    transform: translateX(0);
+  }
+
+  .nav-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .nav-panel-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--color-text);
+  }
+
+  .nav-close-button {
+    background: transparent;
+    border: 0;
+    color: var(--color-text);
+    font: inherit;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .nav-panel-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .nav-panel-links a {
+    display: block;
+    padding: 0.7rem 0.25rem;
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    background: transparent;
+    border-bottom: 1px solid rgba(var(--gray), 0.08);
+  }
+
+  .nav-panel-links a:hover {
+    color: var(--accent);
+    background: rgba(var(--gray-light), 0.4);
+  }
+</style>
 
 <script>
   const toggleButton = document.getElementById('nav-offcanvas-toggle');
   const closeButton = document.getElementById('nav-offcanvas-close');
   const backdrop = document.getElementById('nav-offcanvas-backdrop');
   const panel = document.getElementById('nav-offcanvas-panel');
+  const icon = toggleButton?.querySelector('svg');
 
-  function setOffcanvasOpen(isOpen: boolean | undefined) {
+  function setOffcanvasOpen(isOpen) {
     if (!toggleButton || !panel || !backdrop) return;
 
     toggleButton.setAttribute('aria-expanded', String(isOpen));
-    panel.classList.toggle('translate-x-full', !isOpen);
-    panel.classList.toggle('translate-x-0', Boolean(isOpen));
+    panel.classList.toggle('is-open', isOpen);
     panel.setAttribute('aria-hidden', String(!isOpen));
+    backdrop.classList.toggle('is-open', isOpen);
+    backdrop.setAttribute('aria-hidden', String(!isOpen));
 
-    backdrop.classList.toggle('opacity-0', !isOpen);
-    backdrop.classList.toggle('pointer-events-none', !isOpen);
-    backdrop.classList.toggle('opacity-100', Boolean(isOpen));
-    backdrop.classList.toggle('pointer-events-auto', Boolean(isOpen));
-
-    const icon = toggleButton.querySelector('svg');
     if (icon) {
-      icon.classList.toggle('rotate-180', Boolean(isOpen));
+      icon.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
     }
+
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   }
 
   toggleButton?.addEventListener('click', () => {
