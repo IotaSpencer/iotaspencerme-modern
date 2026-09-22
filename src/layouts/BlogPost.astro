@@ -33,11 +33,12 @@ const {
 		<div class="prose">
 			<div class="title">
 				<div class="date">
+					<span class="date-label">Published</span>
 					<FormattedDate date={pubDate} />
 					{
 						updatedDate && (
 							<div class="last-updated-on">
-								Last updated on <FormattedDate date={updatedDate} />
+								Updated <FormattedDate date={updatedDate} />
 							</div>
 						)
 					}
@@ -81,11 +82,25 @@ const {
 			margin: 0 0 0.5em 0;
 		}
 		.date {
-			margin-bottom: 0.5em;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: baseline;
+			gap: 0.4rem;
+			margin-bottom: 1.1rem;
+			font-size: 0.78rem;
 			color: rgb(var(--gray));
 		}
+		.date-label {
+			font-weight: 700;
+			text-transform: uppercase;
+			color: var(--accent);
+		}
 		.last-updated-on {
+			width: 100%;
+			font-size: 0.72rem;
 			font-style: italic;
+			color: rgb(var(--gray));
 		}
 	</style>
 </Page>
