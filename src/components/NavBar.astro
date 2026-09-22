@@ -16,26 +16,27 @@ import ChevronDownIcon from '~icons/akar-icons/chevron-down';
         <a href="/" class="pr-2"><li style="display: inline-block;">Home</li></a>&nbsp;&sol;&nbsp;
         <a href="/about" class="pr-2"><li style="display: inline-block;">About</li></a>&nbsp;&sol;&nbsp;
         <a href="/blog" class="pr-2"><li style="display: inline-block;">Blog</li></a>&nbsp;&sol;&nbsp;
-        <li style="display: inline-block;">
-          <Dropdown class="group">
-            <button>
+        <li class="relative inline-block">
+          <Dropdown class="group relative">
+            <button class="flex items-center gap-1">
               <span> Placeholder </span>
-              <!-- You can style when dropdown is `open` -->
-              <ChevronDownIcon class="w-6 h-6 text-gray-800 group-open:rotate-180 transition-transform " style="display: block;" />
+              <ChevronDownIcon class="w-6 h-6 text-gray-800 group-open:rotate-180 transition-transform" style="display: block;" />
             </button>
-            <DropdownItems>
-              <div class="">
-                <ul>
-                  <li>Menu 1</li>
-                  <li>Menu 2</li>
-                  <li>
-                    <DropdownSubmenu>
-                      <button>Submenu</button>
-                      <DropdownItems>
-                        <ul>
-                          <li>Sub Menu 1</li>
-                          <li>Sub Menu 2</li>
-                        </ul>
+            <DropdownItems class="relative">
+              <div class="absolute left-0 top-full z-50 mt-2 min-w-44 rounded-md border border-gray-200 bg-white p-2 shadow-lg">
+                <ul class="m-0 list-none space-y-1">
+                  <li class="px-2 py-1">Menu 1</li>
+                  <li class="px-2 py-1">Menu 2</li>
+                  <li class="relative px-2 py-1">
+                    <DropdownSubmenu class="group/submenu relative">
+                      <button class="flex items-center justify-between gap-2">Submenu</button>
+                      <DropdownItems class="relative">
+                        <div class="absolute left-full top-0 z-50 ml-2 min-w-40 rounded-md border border-gray-200 bg-white p-2 shadow-lg">
+                          <ul class="m-0 list-none space-y-1">
+                            <li class="px-2 py-1">Sub Menu 1</li>
+                            <li class="px-2 py-1">Sub Menu 2</li>
+                          </ul>
+                        </div>
                       </DropdownItems>
                     </DropdownSubmenu>
                   </li>
