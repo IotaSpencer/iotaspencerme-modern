@@ -3,6 +3,17 @@ layout: ../../../../layouts/Page.astro
 breadcrumb: Guide
 title: mkmatter Guide
 excerpt: A guide for mkmatter
+categories:
+- Jekyll
+- mkmatter
+- Tutorial
+- Guide
+tags:
+- mkmatter
+- jekyll
+- generator
+- help
+- guide
 ---
 ## mkmatter Guide
 

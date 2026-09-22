@@ -3,14 +3,14 @@ layout: ../../layouts/Page.astro
 title: Projects
 ---
 
-# Projects
+## Projects
 
-## Code
+### Code
 
 - [GitHub](https://github.com/IotaSpencer)
 - [GitLab](https://gitlab.com/IotaSpencer)
 
-## Project Pages
+### Project Pages
 
 - [clickflare](/projects/clickflare/)
 - [cinch-bot_template](/projects/cinch-bot_template/)

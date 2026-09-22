@@ -2,6 +2,23 @@
 layout: ../../../layouts/Page.astro
 title: mkmatter
 breadcrumb: mkmatter
+categories:
+- Jekyll
+- mkmatter
+- Ruby
+- Gem
+- RubyGems
+tags:
+- jekyll
+- mkmatter
+- ruby
+- gem
+- rubygems
+page_links:
+  'mkmatter on RubyGems.org': https://rubygems.org/gems/mkmatter
+  GitHub: https://github.com/IotaSpencer/mkmatter
+  micro: https://github.com/zyedidia/micro
+  getmic.ro: https://github.com/benweissmann/getmic.ro
 ---
 # mkmatter
 <div>
