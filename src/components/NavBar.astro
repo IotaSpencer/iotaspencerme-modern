@@ -26,19 +26,28 @@ import ChevronDownIcon from '~icons/akar-icons/chevron-down';
     aria-hidden="true"
   >
     <div class="nav-panel-header">
-      <h2>Menu</h2>
-      <button id="nav-offcanvas-close" type="button" class="nav-close-button">
+      <h2>Navigation</h2>
+      <button id="nav-offcanvas-close" type="button" class="nav-close-button" aria-label="Close menu">
         Close
       </button>
     </div>
 
-    <nav class="nav-panel-links" aria-label="Main navigation">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/blog">Blog</a>
-      <a href="/">Menu 1</a>
-      <a href="/about">Menu 2</a>
-    </nav>
+    <div class="nav-panel-section">
+      <p class="nav-panel-label">Explore</p>
+      <nav class="nav-panel-links" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+      </nav>
+    </div>
+
+    <div class="nav-panel-section">
+      <p class="nav-panel-label">More</p>
+      <nav class="nav-panel-links" aria-label="Secondary navigation">
+        <a href="/">Menu 1</a>
+        <a href="/about">Menu 2</a>
+      </nav>
+    </div>
   </aside>
 </div>
 
@@ -58,15 +67,20 @@ import ChevronDownIcon from '~icons/akar-icons/chevron-down';
     background: var(--color-bg);
     color: var(--color-text);
     border-radius: 999px;
-    padding: 0.5rem 0.9rem;
+    padding: 0.6rem 1rem;
     font: inherit;
     cursor: pointer;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   }
 
   .nav-toggle:hover {
     border-color: rgba(var(--gray), 0.45);
     box-shadow: 0 2px 10px rgba(var(--gray), 0.08);
+  }
+
+  .nav-toggle-label {
+    font-weight: 600;
+    letter-spacing: 0.01em;
   }
 
   .nav-toggle-icon {
@@ -116,6 +130,8 @@ import ChevronDownIcon from '~icons/akar-icons/chevron-down';
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(var(--gray), 0.12);
   }
 
   .nav-panel-header h2 {
@@ -126,11 +142,27 @@ import ChevronDownIcon from '~icons/akar-icons/chevron-down';
 
   .nav-close-button {
     background: transparent;
-    border: 0;
+    border: 1px solid rgba(var(--gray), 0.18);
+    border-radius: 999px;
     color: var(--color-text);
     font: inherit;
+    font-size: 0.95rem;
+    padding: 0.45rem 0.8rem;
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 1;
+  }
+
+  .nav-panel-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .nav-panel-label {
+    margin: 0 0 0.55rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(var(--gray-dark), 0.72);
   }
 
   .nav-panel-links {
@@ -141,17 +173,19 @@ import ChevronDownIcon from '~icons/akar-icons/chevron-down';
 
   .nav-panel-links a {
     display: block;
-    padding: 0.7rem 0.25rem;
+    padding: 0.8rem 0.75rem;
     color: var(--color-text);
     text-decoration: none;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     background: transparent;
-    border-bottom: 1px solid rgba(var(--gray), 0.08);
+    border: 1px solid transparent;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   }
 
   .nav-panel-links a:hover {
     color: var(--accent);
     background: rgba(var(--gray-light), 0.4);
+    border-color: rgba(var(--gray), 0.12);
   }
 </style>
 
