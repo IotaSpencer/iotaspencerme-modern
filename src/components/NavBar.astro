@@ -1,34 +1,18 @@
 ---
-import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import ChevronDownIcon from '~icons/akar-icons/chevron-down';
 ---
 
-<div>
-  <Astronav>
-    <div class="flex justify-between justify-items-center">
-      <MenuIcon class="w-8 h-8 text-gray-800 m-auto" />
-    </div>
-
-    <MenuItems class="hidden">
-      <ul class="flex items-center gap-3">
-        <li><a href="/" class="pr-2">Home</a></li>
-        <li><a href="/about" class="pr-2">About</a></li>
-        <li><a href="/blog" class="pr-2">Blog</a></li>
-        <li>
-          <button
-            id="nav-offcanvas-toggle"
-            type="button"
-            class="flex items-center gap-1 rounded-md px-2 py-1 text-left"
-            aria-expanded="false"
-            aria-controls="nav-offcanvas-panel"
-          >
-            <span>Placeholder</span>
-            <ChevronDownIcon class="h-6 w-6 text-gray-800 transition-transform duration-200" />
-          </button>
-        </li>
-      </ul>
-    </MenuItems>
-  </Astronav>
+<div class="relative">
+  <button
+    id="nav-offcanvas-toggle"
+    type="button"
+    class="flex items-center gap-1 rounded-md px-2 py-1 text-left"
+    aria-expanded="false"
+    aria-controls="nav-offcanvas-panel"
+  >
+    <span>Menu</span>
+    <ChevronDownIcon class="h-6 w-6 text-gray-800 transition-transform duration-200" />
+  </button>
 
   <div
     id="nav-offcanvas-backdrop"
@@ -48,10 +32,11 @@ import ChevronDownIcon from '~icons/akar-icons/chevron-down';
     </div>
 
     <ul class="mt-6 space-y-4 text-left text-base text-gray-800">
+      <li><a href="/" class="block py-2">Home</a></li>
+      <li><a href="/about" class="block py-2">About</a></li>
+      <li><a href="/blog" class="block py-2">Blog</a></li>
       <li><a href="/" class="block py-2">Menu 1</a></li>
       <li><a href="/about" class="block py-2">Menu 2</a></li>
-      <li><a href="/blog" class="block py-2">Sub Menu 1</a></li>
-      <li><a href="/" class="block py-2">Sub Menu 2</a></li>
     </ul>
   </aside>
 </div>
@@ -67,15 +52,17 @@ import ChevronDownIcon from '~icons/akar-icons/chevron-down';
 
     toggleButton.setAttribute('aria-expanded', String(isOpen));
     panel.classList.toggle('translate-x-full', !isOpen);
-    panel.classList.toggle('translate-x-0', isOpen);
+    panel.classList.toggle('translate-x-0', Boolean(isOpen));
     panel.setAttribute('aria-hidden', String(!isOpen));
+
     backdrop.classList.toggle('opacity-0', !isOpen);
     backdrop.classList.toggle('pointer-events-none', !isOpen);
-    backdrop.classList.toggle('opacity-100', isOpen);
-    backdrop.classList.toggle('pointer-events-auto', isOpen);
+    backdrop.classList.toggle('opacity-100', Boolean(isOpen));
+    backdrop.classList.toggle('pointer-events-auto', Boolean(isOpen));
+
     const icon = toggleButton.querySelector('svg');
     if (icon) {
-      icon.classList.toggle('rotate-180', isOpen);
+      icon.classList.toggle('rotate-180', Boolean(isOpen));
     }
   }
 
