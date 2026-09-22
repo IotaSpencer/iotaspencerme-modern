@@ -1,0 +1,34 @@
+---
+import { Image } from 'webcoreui/astro'
+
+import type { MaintenanceProps } from './maintenance'
+import cog from './cog.svg?raw'
+import styles from './maintenance.module.scss'
+
+export type Props = MaintenanceProps
+
+const {
+    img,
+    animated = true,
+    title = 'Under Maintenance',
+    subTitle = 'We are performing scheduled maintenance.',
+    className
+} = Astro.props
+
+const classes = [
+    styles.maintenance,
+    animated && styles.animated,
+    className
+]
+---
+
+<section class:list={classes}>
+    {img?.src
+        ? <Image {...img} />
+        : <Fragment set:html={cog} />
+    }
+    <h1 class={styles.title}>{title}</h1>
+    {subTitle && (
+        <span class="muted" set:html={subTitle} />
+    )}
+</section>

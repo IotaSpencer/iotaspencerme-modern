@@ -1,0 +1,23 @@
+@use 'webcoreui/config' as *;
+
+.btn {
+    padding: 2px !important;
+    align-self: center;
+}
+
+.card {
+    flex: 1;
+    
+    > div {
+        @include layout(flex, sm, v-center);
+    }
+
+    svg {
+        @include size(20px);
+    }
+}
+
+.wrapper {
+    flex: 1;
+}
+

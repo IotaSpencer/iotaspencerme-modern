@@ -1,0 +1,44 @@
+---
+import {
+    Alert,
+    Icon,
+    Modal
+} from 'webcoreui/astro'
+
+import Button from '@blocks/Button/Button.astro'
+
+import styles from './deployments.module.scss'
+---
+
+<Alert title="Deployments">
+    <Icon type="github" slot="icon" />
+    <span>Connect your project to GitHub to start running automatic deployments.</span>
+    <br />
+    <Button className={styles.connect} id="connect" text="Connect" />
+</Alert>
+
+<Modal title="Are you sure?" subTitle="Confirm update" className="modal">
+    <p>Automatic deployments will be enabled for your project.</p>
+    <Button className="close-modal" text="Confirm" />
+    <Button theme="secondary" className="close-modal" text="Cancel" />
+</Modal>
+
+<script>
+    import { closeModal, modal, on } from 'webcoreui'
+
+    const addModal = () => {
+        const closeButton = document.querySelectorAll('.close-modal')
+
+        modal({
+            trigger: '#connect',
+            modal: '.modal'
+        })
+
+        Array.from(closeButton).forEach(button => {
+            button?.addEventListener('click', () => closeModal('.modal'))
+        })
+    }
+
+    on(document, 'astro:after-swap', addModal)
+    addModal()
+</script>

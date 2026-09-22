@@ -1,0 +1,46 @@
+<script lang="ts">
+    import { classNames } from 'webcoreui'
+    import {
+        Card,
+        ConditionalWrapper,
+        Image,
+        type ImageProps
+    } from 'webcoreui/svelte'
+
+    import type { BlogCardProps } from './blogCard'
+    import styles from './blog-card.module.scss'
+
+    export type Props = BlogCardProps
+
+    const {
+        href,
+        target,
+        img,
+        title,
+        text,
+        secondary,
+        className,
+        ...rest
+    }: Props = $props()
+</script>
+
+<a href={href} target={target} class={classNames([styles.link, className])}>
+    <Card
+        {...rest}
+        className={styles.card}
+        bodyClassName={classNames([styles.body, secondary && styles.secondary])}
+        secondary={true}
+    >
+        <Image {...img as ImageProps} />
+        <ConditionalWrapper condition={!!text}>
+            {#if title}
+                <strong>{title}</strong>
+            {/if}
+            {#if text}
+                <div class="muted">
+                    {@html text}
+                </div>
+            {/if}
+        </ConditionalWrapper>
+    </Card>
+</a>

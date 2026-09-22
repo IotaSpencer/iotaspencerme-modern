@@ -1,0 +1,48 @@
+---
+import { Card, ConditionalWrapper, Icon } from 'webcoreui/astro'
+
+import type { SettingCardProps } from './settingCard'
+import styles from './setting-card.module.scss'
+
+export type Props = SettingCardProps
+
+const {
+    icon,
+    title,
+    subTitle,
+    ...rest
+} = Astro.props
+---
+
+<Card
+    secondary={true}
+    flat={true}
+    bodyClassName="flex column sm"
+    {...rest}
+>
+    <div class:list={[
+        styles.body,
+        'flex justify-between items-center xs'
+    ]}>
+        <ConditionalWrapper condition={!!icon}>
+            <div slot="wrapper" class="flex center">children</div>
+
+            {icon && (
+                <Fragment>
+                    {icon.startsWith('<svg')
+                        ? <Fragment set:html={icon} />
+                        : <Icon type={icon} />
+                    }
+                </Fragment>
+            )}
+
+            <div class="flex column xxs">
+                <div>{title}</div>
+                {subTitle && <div class="muted">{subTitle}</div>}
+            </div>
+        </ConditionalWrapper>
+
+        <slot />
+    </div>
+    <slot name="additional-content" />
+</Card>

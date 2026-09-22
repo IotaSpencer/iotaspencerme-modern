@@ -1,0 +1,45 @@
+---
+import {
+    Avatar,
+    ConditionalWrapper,
+    Rating
+} from 'webcoreui/astro'
+
+import type { UserProps } from './user'
+
+export type Props = UserProps
+
+const {
+    avatar,
+    avatarSize = 50,
+    name,
+    role,
+    roleTooltip,
+    rating,
+    ...rest
+} = Astro.props
+---
+
+<ConditionalWrapper condition={!!rating}>
+    <div slot="wrapper">children</div>
+
+    <div class="flex sm items-center">
+        <Avatar
+            img={avatar}
+            size={avatarSize}
+        />
+        <div class="flex column xs">
+            <span>{name}</span>
+            {role && (
+                <span class="muted" data-tooltip={roleTooltip}>
+                    {role}
+                </span>
+            )}
+        </div>
+    </div>
+    {rating && (
+        <hr />
+        <Rating {...rest} score={rating} />
+    )}
+</ConditionalWrapper>
+

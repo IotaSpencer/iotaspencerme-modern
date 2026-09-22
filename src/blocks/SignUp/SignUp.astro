@@ -1,0 +1,76 @@
+---
+import {
+    Card,
+    Input
+} from 'webcoreui/astro'
+
+import Button from '@blocks/Button/Button.astro'
+
+import type { SignUpProps } from './signup'
+
+export type Props = SignUpProps & {
+    primaryButtonSelector?: string
+    secondaryButtonSelector?: string
+}
+
+const {
+    label = 'Sign up',
+    emailLabel = 'Email',
+    emailPlaceholder = 'Enter your email',
+    emailSubText = '',
+    passwordLabel = 'Password',
+    passwordPlaceholder = 'Enter your password',
+    passwordSubText = 'Generate a unique password <a href="#">here</a>',
+    primaryButtonTheme = 'success',
+    primaryButtonLabel = 'Create an account',
+    secondaryButtonTheme = 'secondary',
+    secondaryButtonLabel = 'Sign in',
+    primaryButtonSelector,
+    secondaryButtonSelector
+} = Astro.props
+---
+
+<Card title={label}>
+    <form class="flex column sign-up-form">
+        <Input
+            label={emailLabel}
+            placeholder={emailPlaceholder}
+            subText={emailSubText}
+            autocomplete="on"
+        />
+        <Input
+            type="password"
+            label={passwordLabel}
+            placeholder={passwordPlaceholder}
+            subText={passwordSubText}
+            autocomplete="on"
+        />
+        <div class="flex xs wrap">
+            {primaryButtonLabel && (
+                <Button
+                    theme={primaryButtonTheme}
+                    className={primaryButtonSelector}
+                    text={primaryButtonLabel}
+                />
+            )}
+            {secondaryButtonLabel && (
+                <Button
+                    theme={secondaryButtonTheme}
+                    className={secondaryButtonSelector}
+                    text={secondaryButtonLabel}
+                />
+            )}
+        </div>
+    </form>
+</Card>
+
+<script>
+    import { on } from 'webcoreui'
+
+    const addEventListener = () => {
+        on('.sign-up-form', 'submit', (event: Event) => event.preventDefault())
+    }
+
+    on(document, 'astro:after-swap', addEventListener)
+    addEventListener()
+</script>
