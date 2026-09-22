@@ -1,10 +1,8 @@
 ---
-layout: post
 title: "Ubuntu 18.04"
 author: IotaSpencer
 pubDate: "Apr 26 2018"
-description: &summary The latest LTS version has released!
-summary: *summary
+description: The latest LTS version has released!
 tags:
 - ubuntu
 categories:

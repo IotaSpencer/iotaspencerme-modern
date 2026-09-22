@@ -7,7 +7,9 @@ interface Props {
 }
 
 const { breadcrumb, categories, tags, links } = Astro.props;
-const hasMetadata = breadcrumb || categories.length || tags.length || Object.keys(links).length;
+const hasMetadata = Boolean(
+	breadcrumb || categories.length > 0 || tags.length > 0 || Object.keys(links).length > 0,
+);
 ---
 
 {hasMetadata && (

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: So um Jekyll..
 description: I changed my site over to jekyll in the past (Jan 2018)
 author: IotaSpencer
@@ -20,9 +19,6 @@ keywords:
 - jekyll ruby
 - jekyll framework
 - github pages
-summary: |-
-  Jekyll is a blogging framework that scores high on my board.
-
 ---
 ## About Jekyll
 

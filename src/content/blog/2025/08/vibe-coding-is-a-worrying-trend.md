@@ -1,6 +1,4 @@
 ---
-layout: post
-
 title: Vibe Coding is a worrying trend.
 
 tags:
@@ -14,14 +12,9 @@ tags:
 categories:
 - Posts
 
-summary: Vibe Coding is a worrying trend. Let's talk about it.
-
 description: Vibe Coding is a worrying trend. Lets talk about it.
 
 pubDate: 'Aug 30 2025'
-
-modified: false
-modifications: false
 
 ---
 ## Introduction

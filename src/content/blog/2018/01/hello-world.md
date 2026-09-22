@@ -1,13 +1,11 @@
 ---
-layout: post
 title: Hello World
 author: IotaSpencer
 tags:
   - first-post
 categories:
   - posts
-description: &summary First post on jekyll! .. also I have my own site now!
-summary: *summary
+description: First post on jekyll! .. also I have my own site now!
 pubDate: Jan 14 2018
 ---
 

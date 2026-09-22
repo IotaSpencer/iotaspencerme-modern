@@ -1,11 +1,10 @@
 ---
-layout: post
 title: Changes coming to the site after a long while
 description: Theres going to be some big changes coming to the site, including subdomains for projects, and other similar things, guides that were with projects will be moved over to their own subdomains.
 author: IotaSpencer
 pubDate: Nov 22 2019
 series: updates_series
-category:
+categories:
   - Updates
 tags:
   - updates

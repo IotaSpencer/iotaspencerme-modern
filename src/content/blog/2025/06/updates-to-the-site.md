@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Updates To The Site!
 excerpt: |-
   There have been a large amount of changes to the site, this posts goes through almost all of them.
@@ -8,22 +7,10 @@ tags:
 - posts
 categories:
 - Updates
-summary: |-
-  There have been a large amount of changes to the site,
-  this posts goes through almost all of them.
 description: |-
   There have been a large amount of changes to the site,
   this posts goes through almost all of them.
 pubDate: Jun 08 2025
-meta_links: 
-  - rel: canonical
-    href: https://www.example.com/updates-to-the-site/
-  - rel: alternate
-    type: application/rss+xml
-    href: https://www.example.com/updates-to-the-site/feed.xml
-
-modified: false
-  
 series: updates_series
 ---
 
