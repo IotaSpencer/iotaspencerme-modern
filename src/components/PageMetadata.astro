@@ -1,0 +1,58 @@
+---
+interface Props {
+	breadcrumb?: string;
+	categories: string[];
+	tags: string[];
+	links: Record<string, string>;
+}
+
+const { breadcrumb, categories, tags, links } = Astro.props;
+const hasMetadata = breadcrumb || categories.length || tags.length || Object.keys(links).length;
+---
+
+{hasMetadata && (
+	<nav aria-label="Page metadata" class="page-metadata">
+		{breadcrumb && <span class="breadcrumb">{breadcrumb}</span>}
+		{categories.length > 0 && (
+			<ul aria-label="Categories">
+				{categories.map((category) => <li>{category}</li>)}
+			</ul>
+		)}
+		{tags.length > 0 && (
+			<ul aria-label="Tags">
+				{tags.map((tag) => <li>{tag}</li>)}
+			</ul>
+		)}
+		{Object.entries(links).length > 0 && (
+			<ul aria-label="Related links">
+				{Object.entries(links).map(([label, href]) => (
+					<li><a href={href}>{label}</a></li>
+				))}
+			</ul>
+		)}
+	</nav>
+)}
+
+<style>
+	.page-metadata {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 1rem;
+		align-items: center;
+		margin-bottom: 1rem;
+		font-size: 0.9rem;
+	}
+	.page-metadata ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.page-metadata li {
+		padding: 0.15rem 0.45rem;
+		border: 1px solid currentColor;
+		border-radius: 0.25rem;
+	}
+</style>
