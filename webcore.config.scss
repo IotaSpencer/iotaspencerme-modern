@@ -1,13 +1,1 @@
-@use 'webcoreui/styles' as *;
-@include setup((
-    // Define paths for your fonts
-    fontRegular: '/fonts/Inter-Regular.woff2',
-    fontBold: '/fonts/Inter-Bold.woff2',
-
-    // Optionally, define which styles you'd like to include
-    includeResets: true,
-    includeUtilities: true,
-    includeTooltip: true,
-    includeScrollbarStyles: true,
-    includeBreakpoints: true
-));
+// WebCoreUI reads this file while compiling component styles.
