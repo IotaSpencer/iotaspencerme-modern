@@ -1,7 +1,6 @@
 ---
-layout: Page
+layout: ../../../layouts/Page.astro
 title: clickflare
-permalink: /projects/clickflare/index.html
 page_links:
   'clickflare on pypi.org': https://pypi.org/clickflare
   GitHub: https://github.com/IotaSpencer/clickflare

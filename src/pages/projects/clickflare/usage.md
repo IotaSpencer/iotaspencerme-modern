@@ -1,3 +1,8 @@
+---
+layout: ../../../layouts/Page.astro
+title: clickflare Usage
+---
+
 ## clickflare
 
 [![PyPI Version](https://img.shields.io/pypi/v/clickflare.svg)](https://pypi.org/project/clickflare/)

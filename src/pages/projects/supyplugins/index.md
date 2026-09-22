@@ -1,7 +1,6 @@
 ---
-layout: Page
+layout: ../../../layouts/Page.astro
 title: SupyPlugins
-permalink: /projects/supyplugins/index.html
 categories:
 - Python
 - Limnoria
@@ -22,7 +21,7 @@ In the past I've made bots for..
 * Connectors to other projects
 * Sending log file changes to an IRC chatroom
 
-Some plugins are already made, like `OperUp`{:.highlight} a plugin for making a bot `operup`{:.highlight}
+Some plugins are already made, like `OperUp`, a plugin for making a bot `operup`.
 While I can send in Pull Requests, not all projects are still *alive*, so I have to take matters into my own hands
 and either make a new plugin, or take the previous code and change it myself.
 

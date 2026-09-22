@@ -1,7 +1,6 @@
 ---
-layout: Page
+layout: ../../../layouts/Page.astro
 title: PyLink
-permalink: /projects/pylink/index.html
 categories:
 - Python
 - Janus

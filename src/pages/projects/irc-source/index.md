@@ -1,7 +1,6 @@
 ---
-layout: Page
+layout: ../../../layouts/Page.astro
 title: IRC-Source
-permalink: /projects/irc-source/index.html
 tags:
 - irc-source
 - irc-source.com

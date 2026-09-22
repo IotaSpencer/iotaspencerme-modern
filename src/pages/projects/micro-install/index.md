@@ -1,7 +1,6 @@
 ---
-layout: Page
+layout: ../../../layouts/Page.astro
 title: micro_install
-permalink: /projects/micro-install/index.html
 breadcrumb: micro_install
 tags:
 - mkmatter
@@ -25,10 +24,10 @@ micro_install is a ruby gem ported from [benweissmann](https://github.com/benwei
 micro_install is used as a ruby port to benweissmann's [https://getmic.ro](https://getmic.ro) but packaged as a gem.
 It installs [@zyedidia](https://github.com/zyedidia)'s micro, a terminal text editor.
 The gem itself is also installed when [mkmatter](https://iotaspencer.me/projects/mkmatter) is installed.
-If installed by running `micro-install`{:.highlight} then mkmatter uses `micro`{:.highlight} by default when it asks to open an editor.
+If installed by running `micro-install` then mkmatter uses `micro` by default when it asks to open an editor.
 
-micro_install is either installed via `gem install micro_install`{:.highlight} or can be cloned
- and installed using a combination of `bundle install`{:.highlight}
+micro_install is either installed via `gem install micro_install` or can be cloned
+and installed using a combination of `bundle install`.
 
 ## Usage
 

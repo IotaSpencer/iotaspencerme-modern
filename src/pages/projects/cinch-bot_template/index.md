@@ -1,7 +1,6 @@
 ---
-layout: Page
+layout: ../../../layouts/Page.astro
 title: Bot Template
-permalink: /projects/cinch-bot_template/index.html
 page_links:
   'cinch-bot_template on RubyGems.org': https://rubygems.org/gems/cinch-bot_template
   GitHub: https://github.com/IotaSpencer/cinch-bot_template

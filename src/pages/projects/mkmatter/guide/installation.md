@@ -1,8 +1,7 @@
 ---
-layout: Page
+layout: ../../../../layouts/Page.astro
 title: Installation
 breadcrumb: Installation
-permalink: /projects/mkmatter/guide/installation/index.html
 categories:
 - Jekyll
 - mkmatter
@@ -12,11 +11,9 @@ tags:
 - installation
 date: '2018-03-04 06:52:40 -0500'
 ---
-{::options parse_block_html="true" /}
 <div class="float-right card bg-dark ml-4 mr-2">
 
 # Contents
-{:.no_toc .mx-auto}
 
 * TOC
 {:toc class="well bg-dark d-inline-block pr-3 py-2"}
@@ -41,15 +38,12 @@ To install 'mkmatter', do the following.
 
 ## To Share or not To Share
 
-{:.list-group .list-options .bg-dark}
 <div class="d-flex">
 
-{:.list-group-item .list-options-item .bg-dark .list-unstyled}
 * ### User Install
 
   `$ gem install --user-install mkmatter`{: .highlight .d-block}
 
-{:.list-group-item .list-options-item .bg-dark .list-unstyled}
 * ### System-wide Install
 
   `$ sudo gem install mkmatter`{: .highlight .d-block}

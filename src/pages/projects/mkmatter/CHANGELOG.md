@@ -1,3 +1,8 @@
+---
+layout: ../../layouts/Page.astro
+title: mkmatter Change Log
+---
+
 # Change Log
 
 ## [v1.0.10](https://github.com/IotaSpencer/mkmatter/tree/v1.0.10) (2018-01-24)

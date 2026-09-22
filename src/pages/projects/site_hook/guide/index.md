@@ -1,7 +1,6 @@
 ---
-layout: Page
+layout: ../../../../layouts/Page.astro
 title: site_hook
-permalink: projects/site_hook/guide/index.html
 breadcrumb: guide
 excerpt: A guide on how to set up the ruby gem site_hook, only versions > 0.9.3
 tags:

@@ -1,7 +1,6 @@
 ---
-layout: Page
+layout: ../../../layouts/Page.astro
 title: mastosite
-permalink: /projects/mastosite/index.html
 categories:
 - mastodon
 tags:

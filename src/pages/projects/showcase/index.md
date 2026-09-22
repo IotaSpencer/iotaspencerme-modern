@@ -1,8 +1,7 @@
 ---
 title: Project Showcase
 subtitle: My Project Showcase
-layout: Page
+layout: ../../../layouts/Page.astro
 showcase: projects_showcase
-permalink: /projects/showcase/index.html
 show_sidebar: false
 ---

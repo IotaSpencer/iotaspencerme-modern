@@ -1,7 +1,6 @@
 ---
-layout: Page
+layout: ../../../layouts/Page.astro
 title: irc_socket
-permalink: /projects/irc_socket/index.html
 breadcrumb: irc_socket
 tags:
 - irc_socket

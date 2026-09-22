@@ -1,20 +1,7 @@
 ---
-layout: Page
+layout: ../../../layouts/Page.astro
 title: mkmatter
 breadcrumb: mkmatter
-permalink: /projects/mkmatter/index.html
-excerpt:
-tags:
-- jekyll
-- mkmatter
-- ruby
-- gem
-- rubygems
-page_links:
-  'mkmatter on RubyGems.org': https://rubygems.org/gems/mkmatter
-  GitHub: https://github.com/IotaSpencer/mkmatter
-  micro: https://github.com/zyedidia/micro
-  getmic.ro: https://github.com/benweissmann/getmic.ro
 ---
 <h1>mkmatter</h1>
 <div>
@@ -40,6 +27,6 @@ page_links:
 
 <p>mkmatter is a <a href="https://ruby-lang.com/">Ruby</a><a href="https://rubygems.org/">Gem</a> for the <a href="https://jekyllrb.com">Jekyll</a> blog-aware, static site generator.</p>
 
-<p>You can view the documentation for 'mkmatter' <a href="{% link projects/mkmatter/guide/index.html %}">here</a>.</p>
+<p>You can view the documentation for 'mkmatter' <a href="/projects/mkmatter/guide/">here</a>.</p>
 
 <p>mkmatter bundles in an install of 'micro_install' for ease of use. See more information on micro_install and its origin <a href="/projects/micro-install">here</a></p>

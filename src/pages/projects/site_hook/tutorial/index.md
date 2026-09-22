@@ -1,7 +1,6 @@
 ---
-layout: Page
+layout: ../../../../layouts/Page.astro
 title: Tutorial
-permalink: projects/site_hook/tutorial/index.html
 breadcrumb: Tutorial
 excerpt: SiteHook is a RubyGem that is used to pull jekyll blogs and build them as a intermediary between a git service webhook and a production server.
 tags:
@@ -24,7 +23,7 @@ page_links:
 </div>
 
 <div markdown="1">
-# {{ page.title }}
+# Tutorial
 
 **Note**: This tutorial is for < 0.9.2, see [/projects/site_hook/guide/](/projects/site_hook/guide/) for > 0.9.2
 {:.alert .alert-danger .d-inline-block}
@@ -47,5 +46,5 @@ for helping develop site_hook, please go [>here<](/projects/site_hook/developing
     * `~/.jph/logs`{:.highlight}
 
 ## Usage
-  <a href="{% link projects/site_hook/tutorial/usage/index.md %}">Please go here for usage and Starting.</a>
+  <a href="/projects/site_hook/tutorial/usage/">Please go here for usage and Starting.</a>
 </div>

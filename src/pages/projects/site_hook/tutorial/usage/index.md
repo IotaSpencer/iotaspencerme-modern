@@ -1,7 +1,6 @@
 ---
-layout: Page
+layout: ../../../../../layouts/Page.astro
 title: Usage
-permalink: /projects/site_hook/tutorial/usage/index.html
 breadcrumb: Usage
 ---
 ## Usage

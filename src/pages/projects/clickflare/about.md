@@ -1,3 +1,8 @@
+---
+layout: ../../../layouts/Page.astro
+title: clickflare About
+---
+
 ## clickflare - Interface with the Cloudflare API!
 
     clickflare is an interface into the Cloudflare API,

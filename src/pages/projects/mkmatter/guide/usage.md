@@ -1,21 +1,12 @@
 ---
-layout: Page
+layout: ../../../../layouts/Page.astro
 title: Usage
 breadcrumb: Usage
-categories:
-- Jekyll
-- mkmatter
-- Usage
-tags:
-- mkmatter
-- usage
-permalink: /projects/mkmatter/guide/usage/index.html
-date: '2018-03-04 06:52:40 -0500'
 ---
-<h1>{{ page.title }}</h1>
+<h1>Usage</h1>
 
 <h2>Note Before Reading</h2>
-Please read <a href="{% link projects/mkmatter/guide/installation.md %}">Installation</a> before reading this page.
+Please read <a href="/projects/mkmatter/guide/installation/">Installation</a> before reading this page.
 
 At this point, if you haven't already, you should probably run 'micro-install'
 if you want to use 'micro' the terminal text editor.
@@ -49,8 +40,8 @@ if you want to use 'micro' the terminal text editor.
 
 <h6 class="no_toc bg-dark list-group-header list-options-header d-inline-block p-2">Options</h6>
 
-* `--publish`{:.highlight}
-* `--file`{:.highlight}
+* `--publish`
+* `--file`
 
 </div></div>
 

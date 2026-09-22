@@ -1,7 +1,6 @@
 ---
-layout: Page
+layout: ../../../layouts/Page.astro
 title: unibanner
-permalink: /projects/unibanner/index.html
 breadcrumb: unibanner
 tags:
 - unibanner
@@ -19,7 +18,7 @@ page_links:
 
 ## About
 
-Unibanner is a small-ish IRC bot built to `ZLINE`{:.highlight} and blacklist
+Unibanner is a small-ish IRC bot built to `ZLINE` and blacklist
   unicode spamming bots like those originating from the freenodegate-type bots
 
 

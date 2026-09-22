@@ -1,7 +1,6 @@
 ---
-layout: Page
+layout: ../../../layouts/Page.astro
 title: site_hook
-permalink: projects/site_hook/index.html
 breadcrumb: site_hook
 excerpt: SiteHook is a RubyGem that is used to pull jekyll blogs and build them as a intermediary between a git service webhook and a production server.
 tags:
@@ -14,7 +13,7 @@ page_links:
   'site_hook on RubyGems.org': https://rubygems.org/gems/site_hook
   GitHub: https://github.com/IotaSpencer/site_hook
 ---
-# {{ page.title }}
+# site_hook
 
 ## Badges
 {:.d-none}
@@ -26,7 +25,7 @@ Discord Chat: [![Discord](https://img.shields.io/discord/497246541053165570.svg?
 
 ## About
 
-{{ page.excerpt }}
+SiteHook is a RubyGem that is used to pull jekyll blogs and build them as a intermediary between a git service webhook and a production server.
 **Note**: 'root' indicates the part of the config file that has only sibling keys, and no parents, the left most column
 
 1. Past 0.9.1 there are breaking configuration changes, they are the following
@@ -51,7 +50,7 @@ Discord Chat: [![Discord](https://img.shields.io/discord/497246541053165570.svg?
 
 ## Tutorial
 
-I've made a tutorial for `site_hook`{:.highlight} [here](/projects/site_hook/tutorial/)
+I've made a tutorial for `site_hook` [here](/projects/site_hook/tutorial/)
 
 This tutorial is for the < 0.9.3 version of site_hook.  
 For > 0.9.3 see [/projects/site_hook/guide](/projects/site_hook/guide/)
