@@ -11,6 +11,12 @@
 		"strictNullChecks": true,
 		"types": [
 			"unplugin-icons/types/astro"
-		]
+		],
+		"baseUrl": ".",
+		"paths": {
+			"@blocks/*": [
+				"src/blocks/*"
+			]
+		}
 	}
 }

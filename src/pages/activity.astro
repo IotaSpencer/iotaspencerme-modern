@@ -1,5 +1,6 @@
 ---
 import Page from '../layouts/Page.astro';
+import { Accordion } from 'webcoreui/astro';
 
 const page = {
     title: 'Coding Activity',
@@ -7,84 +8,31 @@ const page = {
     tags: ['wakatime', 'coding', 'activity', 'coding activity'],
     sidebar: false,
     breadcrumb: 'Wakatime Activity',
-    include_bootstrap: true,
 };
+
+const activityItems = [
+    {
+        title: 'Language Activity',
+        expanded: true,
+        content: `<figure><embed src="https://wakatime.com/share/@IotaSpencer/02c2b5c0-4307-40e8-bd7c-ea67baf98089.svg" style="height:auto;width:100%;"></figure>`,
+    },
+    {
+        title: 'Coding Activity',
+        content: `<figure><embed src="https://wakatime.com/share/@IotaSpencer/47ad3b46-6e9b-448e-930e-f66a721ea5f8.svg" style="height:auto;width:100%;"></figure>`,
+    },
+    {
+        title: 'Editor Activity',
+        content: `<figure><embed src="https://wakatime.com/share/@IotaSpencer/0997a385-a66a-4f25-ad14-2c5ded419a4a.svg" style="height:auto;width:100%;"></figure>`,
+    },
+    {
+        title: 'Activity by Day (5/20/2025)',
+        content: `<figure><embed src="/assets/img/wakatime_days_05-20-2025_0225.gif" style="height:auto;width:100%;"></figure>`,
+    },
+];
 ---
 
 <Page {...page}>
-<style>
-    a { 
-        text-decoration: none;
-    };
-</style>
-<h1>Coding Activity</h1>
-
-
-<div class="accordion" id="accordion-root" >
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
-                Language Activity
-            </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse">
-            <div class="accordion-body">
-                <figure style="height:auto;width:auto;">
-                    <embed style="height:auto;width:auto;" data-recalc-dims="1"
-                    src="https://wakatime.com/share/@IotaSpencer/02c2b5c0-4307-40e8-bd7c-ea67baf98089.svg">
-                </figure>
-            </div>
-        </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                aria-expanded="false" aria-controls="collapseTwo">
-                Coding Activity 
-            </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse">
-            <div class="accordion-body">
-                <figure style="height:auto;width:auto;">
-                    <embed style="height:auto;width:auto;" data-recalc-dims="1"
-                    src="https://wakatime.com/share/@IotaSpencer/47ad3b46-6e9b-448e-930e-f66a721ea5f8.svg">
-                </figure>
-            </div>
-        </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                aria-expanded="false" aria-controls="collapseThree">
-                Editor Activity
-            </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse">
-            <div class="accordion-body">
-                <figure style="height:auto;width:auto;">
-                    <embed style="height:auto;width:auto;" data-recalc-dims="1"
-                    src="https://wakatime.com/share/@IotaSpencer/0997a385-a66a-4f25-ad14-2c5ded419a4a.svg">
-                </figure>
-            </div>
-        </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                aria-expanded="false" aria-controls="collapseFour">
-                Activity by Day (5/20/2025)
-            </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse">
-            <div class="accordion-body">
-                <figure style="height:auto;width:auto;">
-                    <embed style="height:auto;width:100%;"
-                    src="/assets/img/wakatime_days_05-20-2025_0225.gif">
-                </figure>
-            </div>
-        </div>
-    </div>
-</div>
+    <h1>Coding Activity</h1>
+    <Accordion items={activityItems} icon="plus" />
 
 </Page>
