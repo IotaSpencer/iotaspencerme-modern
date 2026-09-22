@@ -12,7 +12,8 @@ interface Props {
 	categories?: string[];
 	tags?: string[];
 	page_links?: Record<string, string>;
-	date?: string | Date;
+	date?: Date;
+	updatedDate?: Date;
 	sidebar?: boolean | string;
 	include_bootstrap?: boolean;
 	crumb?: string;
@@ -27,6 +28,7 @@ const {
 	tags = [],
 	page_links: pageLinks = {},
 	date,
+	updatedDate,
 	sidebar,
 	include_bootstrap: includeBootstrap,
 	crumb,
@@ -41,13 +43,15 @@ const {
 	<body>
 		<Header />
 		<main>
+			<slot />
 			<PageMetadata
 				breadcrumb={breadcrumb}
 				categories={categories}
 				tags={tags}
 				links={pageLinks}
+				date={date}
+				updatedDate={updatedDate}
 			/>
-			<slot />
 		</main>
 		<Footer />
 	</body>

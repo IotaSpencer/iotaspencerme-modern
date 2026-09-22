@@ -4,17 +4,32 @@ interface Props {
 	categories: string[];
 	tags: string[];
 	links: Record<string, string>;
+	date?: Date;
+	updatedDate?: Date;
 }
 
-const { breadcrumb, categories, tags, links } = Astro.props;
+import FormattedDate from './FormattedDate.astro';
+
+const { breadcrumb, categories, tags, links, date, updatedDate } = Astro.props;
 const hasMetadata = Boolean(
-	breadcrumb || categories.length > 0 || tags.length > 0 || Object.keys(links).length > 0,
+	breadcrumb || date || categories.length > 0 || tags.length > 0 || Object.keys(links).length > 0,
 );
 ---
 
 {hasMetadata && (
 	<nav aria-label="Page metadata" class="page-metadata">
 		{breadcrumb && <span class="breadcrumb">{breadcrumb}</span>}
+		{date && (
+			<div class="metadata-group published">
+				<span class="metadata-label">Published</span>
+				<FormattedDate date={date} />
+				{updatedDate && (
+					<span class="updated-date">
+						Updated <FormattedDate date={updatedDate} />
+					</span>
+				)}
+			</div>
+		)}
 		{categories.length > 0 && (
 			<div class="metadata-group">
 				<span class="metadata-label">Filed under</span>
@@ -50,11 +65,12 @@ const hasMetadata = Boolean(
 		flex-wrap: wrap;
 		gap: 0.35rem 1.25rem;
 		align-items: center;
-		margin: -1.5rem auto 1.5rem;
-		padding: 0.8rem 0;
+		margin: 2.5rem auto 0;
+		padding: 1rem 1.1rem;
 		max-width: 720px;
 		border-top: 1px solid rgb(var(--gray-light));
 		border-bottom: 1px solid rgb(var(--gray-light));
+		background: linear-gradient(90deg, rgba(var(--gray-light), 0.18), transparent 60%);
 		font-size: 0.78rem;
 		line-height: 1.4;
 		color: rgb(var(--gray));
@@ -97,10 +113,19 @@ const hasMetadata = Boolean(
 		text-decoration-thickness: 1px;
 		text-underline-offset: 0.18em;
 	}
+	.published {
+		font-weight: 700;
+		color: rgb(var(--gray-dark));
+	}
+	.updated-date {
+		font-weight: 400;
+		font-style: italic;
+		color: rgb(var(--gray));
+	}
 	@media (max-width: 720px) {
 		.page-metadata {
-			margin-top: -0.5rem;
+			margin-top: 2rem;
+			padding-inline: 0.75rem;
 		}
-	}
 	}
 </style>
