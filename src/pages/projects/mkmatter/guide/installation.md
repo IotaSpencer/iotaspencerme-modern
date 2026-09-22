@@ -13,15 +13,17 @@ date: '2018-03-04 06:52:40 -0500'
 ---
 <div class="float-right card bg-dark ml-4 mr-2">
 
-# Contents
+## Contents
 
 * TOC
 {:toc class="well bg-dark d-inline-block pr-3 py-2"}
+
 </div>
 
 <div>
 
-# Installation
+## Installation
+
 To install 'mkmatter', do the following.
 
 <dl>
@@ -48,6 +50,7 @@ To install 'mkmatter', do the following.
 
   `$ sudo gem install mkmatter`{: .highlight .d-block}
   `$ gem install mkmatter`{: .highlight .d-block}
+
 </div>
 
 ------

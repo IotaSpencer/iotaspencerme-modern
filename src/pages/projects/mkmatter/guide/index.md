@@ -4,11 +4,13 @@ breadcrumb: Guide
 title: mkmatter Guide
 excerpt: A guide for mkmatter
 ---
-<h1> mkmatter Guide </h1>
+## mkmatter Guide
 
 <p>These links provide a guide for setting up and using <span class="highlight">mkmatter</span></p>
 <div>
-<h2>Links</h2>
+
+### Links
+
 <div class="px-6">
   <a class="btn bg-success text-light px-6 d-inline-block" href="/projects/mkmatter/guide/installation/">Installation</a>
   <a class="btn bg-success text-light px-6 d-inline-block" href="/projects/mkmatter/guide/usage/">Usage</a>
