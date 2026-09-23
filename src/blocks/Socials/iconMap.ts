@@ -19,7 +19,7 @@ import tiktok from './icons/tiktok.svg?raw'
 import twitch from './icons/twitch.svg?raw'
 import website from './icons/website.svg?raw'
 import x from './icons/x.svg?raw'
-
+import xbox from './icons/xbox.svg?raw'
 import youtube from './icons/youtube.svg?raw'
 
 export const iconMap = {
