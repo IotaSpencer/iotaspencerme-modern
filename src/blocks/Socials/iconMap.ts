@@ -14,7 +14,7 @@ import pinterest from './icons/pinterest.svg?raw'
 import reddit from './icons/reddit.svg?raw'
 import stackexchange from './icons/stackexchange.svg?raw'
 import stackoverflow from './icons/stackoverflow.svg?raw'
-import steam from './icons/steam.svg?raw'
+import steamcommunity from './icons/steam.svg?raw'
 import tiktok from './icons/tiktok.svg?raw'
 import twitch from './icons/twitch.svg?raw'
 import website from './icons/website.svg?raw'
@@ -39,7 +39,7 @@ export const iconMap = {
     reddit,
     stackexchange,
     stackoverflow,
-    steam,
+    steamcommunity,
     tiktok,
     twitch,
     website,
