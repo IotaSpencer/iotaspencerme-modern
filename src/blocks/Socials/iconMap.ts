@@ -1,4 +1,5 @@
 import behance from './icons/behance.svg?raw'
+import cashapp from './icons/cashapp.svg?raw'
 import deviantart from './icons/deviantart.svg?raw'
 import discord from './icons/discord.svg?raw'
 import dribbble from './icons/dribbble.svg?raw'
@@ -8,17 +9,22 @@ import github from './icons/github.svg?raw'
 import instagram from './icons/instagram.svg?raw'
 import linkedin from './icons/linkedin.svg?raw'
 import medium from './icons/medium.svg?raw'
+import npm from './icons/npm.svg?raw'
 import pinterest from './icons/pinterest.svg?raw'
 import reddit from './icons/reddit.svg?raw'
 import stackexchange from './icons/stackexchange.svg?raw'
 import stackoverflow from './icons/stackoverflow.svg?raw'
+import steam from './icons/steam.svg?raw'
 import tiktok from './icons/tiktok.svg?raw'
+import twitch from './icons/twitch.svg?raw'
 import website from './icons/website.svg?raw'
 import x from './icons/x.svg?raw'
+
 import youtube from './icons/youtube.svg?raw'
 
 export const iconMap = {
     behance,
+    cashapp,
     deviantart,
     discord,
     dribbble,
@@ -28,12 +34,16 @@ export const iconMap = {
     instagram,
     linkedin,
     medium,
+    npm,
     pinterest,
     reddit,
     stackexchange,
     stackoverflow,
+    steam,
     tiktok,
+    twitch,
     website,
     x,
+    xbox,
     youtube
 }
