@@ -1,5 +1,5 @@
 import behance from './icons/behance.svg?raw'
-import cashapp from './icons/cashapp.svg?raw'
+import cash from './icons/cashapp.svg?raw'
 import deviantart from './icons/deviantart.svg?raw'
 import discord from './icons/discord.svg?raw'
 import dribbble from './icons/dribbble.svg?raw'
@@ -24,7 +24,7 @@ import youtube from './icons/youtube.svg?raw'
 
 export const iconMap = {
     behance,
-    cashapp,
+    cash,
     deviantart,
     discord,
     dribbble,
